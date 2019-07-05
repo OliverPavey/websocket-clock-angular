@@ -1,3 +1,16 @@
-<p>
-  clock-holder works!
-</p>
+<div class="container">
+  <h1 class="display-4">WebSocket demo</h1>
+  <div class="jumbotron">
+    <h1 class="display-2"><app-clock></app-clock>&nbsp;</h1>
+    <p>The above clock should update:</p>
+    <ul>
+    <li>When the page is loaded.</li>
+    <li>When the force update button is clicked on this browser.</li>
+    <li>When the force update button is clicked on any other browser 
+    (since the request to the server causes a push to all clients).</li>
+    <li>When the server is scheduled to push the time (every 5 seconds).</li>
+    </ul>
+    <p>N.B. The auto-update is deliberately slow so that forced updates can be observed.</p>
+  </div>
+  <button id="update" class="btn btn-primary">Force Update</button>
+</div>  
