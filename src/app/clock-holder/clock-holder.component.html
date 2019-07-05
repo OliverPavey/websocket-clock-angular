@@ -1,7 +1,7 @@
 <div class="container">
   <h1 class="display-4">WebSocket demo</h1>
   <div class="jumbotron">
-    <h1 class="display-2"><app-clock></app-clock>&nbsp;</h1>
+    <h1 class="display-2"><app-clock #clock></app-clock>&nbsp;</h1>
     <p>The above clock should update:</p>
     <ul>
     <li>When the page is loaded.</li>
@@ -12,5 +12,5 @@
     </ul>
     <p>N.B. The auto-update is deliberately slow so that forced updates can be observed.</p>
   </div>
-  <button id="update" class="btn btn-primary">Force Update</button>
+  <button (click)="updateButtonClick($event)" class="btn btn-primary">Force Update</button>
 </div>  

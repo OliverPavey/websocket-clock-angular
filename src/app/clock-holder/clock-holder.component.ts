@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ClockComponent } from '../clock/clock.component';
 
 @Component({
   selector: 'app-clock-holder',
@@ -9,7 +10,12 @@ export class ClockHolderComponent implements OnInit {
 
   constructor() { }
 
+  @ViewChild('clock') clock: ClockComponent;
+
   ngOnInit() {
   }
 
+  updateButtonClick(event: Event) {
+    this.clock.forceUpdate();
+  }
 }
